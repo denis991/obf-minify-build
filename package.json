@@ -1,6 +1,6 @@
 {
   "name": "obf-minify-build",
-  "version": "1.0.2",
+  "version": "0.0.3",
   "description": "Автоматизированная сборка фронтенда с минификацией, обфускацией и защитами. CLI и API.",
   "type": "module",
   "main": "lib/index.js",
@@ -44,7 +44,10 @@
     "scripts/",
     "config.mk",
     "Makefile",
-    "obfuscator.json"
+    "obfuscator.json",
+    ".eslintrc",
+    ".stylelintrc",
+    ".htmlhintrc"
   ],
   "devDependencies": {
     "html-minifier-terser": "^7.0.0",
