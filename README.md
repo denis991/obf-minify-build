@@ -1,4 +1,63 @@
-📝 Особенности решения
+# obf-minify-build
+
+Automated frontend build tool with minification, obfuscation, and protection features. CLI and API support.
+
+📝 Features
+✅ Fully automated build process
+✅ Automatic file discovery with exclusions
+✅ Single configuration for options and ignore lists
+✅ CSS + HTML minification + JS and inline-scripts obfuscation
+✅ Built-in client-side protections (via protection.js and protection.css)
+
+---
+
+## Quick Start
+
+1. Place your source files in `src/` folder (html, css, js, assets).
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Build project:
+   ```sh
+   npm run build
+   ```
+4. Result is in `build/` folder.
+
+## Usage as npm package
+
+### CLI (no installation required)
+```sh
+npx obf-minify-build --src src --out build
+```
+
+### As dependency
+1. Install as dev dependency:
+   ```sh
+   npm install obf-minify-build --save-dev
+   ```
+2. Use in your build script:
+   ```js
+   const { build } = require('obf-minify-build');
+   build({ src: 'src', out: 'build' });
+   ```
+
+## Commands
+- `npm run build` — full build
+- `npm run dev` — rebuild on changes
+- `npm run start` — build and start local server
+
+## Requirements
+- Node.js >= 18
+- Linux/macOS/WSL (cpio, find, make)
+
+---
+
+# obf-minify-build (Русский)
+
+Автоматизированный инструмент сборки фронтенда с минификацией, обфускацией и защитами. Поддержка CLI и API.
+
+📝 Особенности
 ✅ Полностью автоматизированная сборка
 ✅ Автоматический поиск всех файлов с исключениями
 ✅ Единое место для настройки опций и игнор-листов
@@ -22,29 +81,30 @@
 
 ## Использование как npm-пакет
 
-- Для CLI:
-  ```sh
-  npx obf-minify-build [options]
-  ```
-- Для интеграции в другие проекты:
-  1. Установите как зависимость:
-     ```sh
-     npm install obf-minify-build --save-dev
-     ```
-  2. Используйте в своем build-скрипте:
-     ```js
-     const { build } = require('obf-minify-build');
-     build({ src: 'src', out: 'build', ...options });
-     ```
+### CLI (без установки)
+```sh
+npx obf-minify-build --src src --out build
+```
 
-## Основные команды
+### Как зависимость
+1. Установите как dev-зависимость:
+   ```sh
+   npm install obf-minify-build --save-dev
+   ```
+2. Используйте в build-скрипте:
+   ```js
+   const { build } = require('obf-minify-build');
+   build({ src: 'src', out: 'build' });
+   ```
+
+## Команды
 - `npm run build` — полная сборка
 - `npm run dev` — пересборка при изменениях
 - `npm run start` — сборка и запуск локального сервера
 
-## Минимальные зависимости
+## Требования
 - Node.js >= 18
 - Linux/macOS/WSL (cpio, find, make)
 
 ---
-Документация и API — см. [Wiki](./docs) или исходный код.
+Documentation and API — see [Wiki](./docs) or source code.

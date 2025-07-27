@@ -1,6 +1,7 @@
 {
   "name": "obf-minify-build",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "description": "Автоматизированная сборка фронтенда с минификацией, обфускацией и защитами. CLI и API.",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -9,6 +10,34 @@
   "bin": {
     "obf-minify-build": "bin/cli.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denis991/obf-minify-build.git"
+  },
+  "keywords": [
+    "minify", "obfuscate", "build", "html", "css", "js", "cli", "protect", "frontend"
+  ],
+  "author": {
+    "name": "Denis Gutsuliak",
+    "email": "admin@d9911.org",
+    "url": "https://t.me/d9911/"
+  },
+  "contributors": [
+    {
+      "name": "Denis Gutsuliak",
+      "email": "admin@d9911.org",
+      "url": "https://t.me/d9911/"
+    }
+  ],
+  "license": "MIT",
+  "files": [
+    "lib/",
+    "bin/",
+    "scripts/",
+    "config.mk",
+    "Makefile",
+    "obfuscator.json"
+  ],
   "devDependencies": {
     "html-minifier-terser": "^7.0.0",
     "javascript-obfuscator": "^4.0.0",
@@ -29,5 +58,6 @@
   "browserslist": [
     ">0.25%",
     "not dead"
-  ]
+  ],
+  "homepage": "https://github.com/denis991/obf-minify-build#readme"
 }
