@@ -1,0 +1,33 @@
+{
+  "name": "obf-minify-build",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "bin": {
+    "obf-minify-build": "bin/cli.js"
+  },
+  "devDependencies": {
+    "html-minifier-terser": "^7.0.0",
+    "javascript-obfuscator": "^4.0.0",
+    "clean-css-cli": "^5.7.0",
+    "postcss-cli": "^10.1.0",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^5.1.13",
+    "eslint": "^8.44.0",
+    "stylelint": "^14.16.1",
+    "htmlhint": "^0.12.2",
+    "onchange": "^7.1.0"
+  },
+  "scripts": {
+    "build": "make all",
+    "dev": "onchange 'src/**/*' -- npm run build",
+    "start": "npm run build && live-server build"
+  },
+  "browserslist": [
+    ">0.25%",
+    "not dead"
+  ]
+}

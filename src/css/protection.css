@@ -1,0 +1,12 @@
+/* 1) Запрет выделения */
+.nocopy, body {
+user-select: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+}
+/* 2) Скрыть outline для ссылок */
+a:focus { outline: none; }
+
+html,body {background: #000; color:#000;}
+@media print { * { display:none !important; } }

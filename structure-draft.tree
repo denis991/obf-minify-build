@@ -1,0 +1,12 @@
+project/
+├── build/                     # ← итоговый минифицированный + обфусцированный код
+├── config.mk                   # общие пути, опции и игнорируемые файлы
+├── Makefile                     # автоматизированные команды сборки
+├── package.json                 # зависимости (html-minifier-terser, javascript-obfuscator, clean-css-cli)
+├── scripts/
+│   └── obfuscate-html-inline.js  # обфускация inline-скриптов в HTML
+└── src/
+    ├── html/                   # HTML-файлы
+    ├── css/                    # CSS-файлы (включая protection.css)
+    ├── js/                     # JS-файлы (app.js, protection.js)
+    └── assets/                 # изображения, шрифты и др.
