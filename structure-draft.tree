@@ -1,12 +1,31 @@
 project/
 ├── build/                     # ← итоговый минифицированный + обфусцированный код
-├── config.mk                   # общие пути, опции и игнорируемые файлы
-├── Makefile                     # автоматизированные команды сборки
-├── package.json                 # зависимости (html-minifier-terser, javascript-obfuscator, clean-css-cli)
-├── scripts/
-│   └── obfuscate-html-inline.js  # обфускация inline-скриптов в HTML
-└── src/
-    ├── html/                   # HTML-файлы
-    ├── css/                    # CSS-файлы (включая protection.css)
-    ├── js/                     # JS-файлы (app.js, protection.js)
-    └── assets/                 # изображения, шрифты и др.
+├── bin/                       # CLI-скрипт для npm-пакета
+│   └── cli.js                 # командная строка интерфейс
+├── lib/                       # JavaScript API для npm-пакета
+│   └── index.js               # основная функция build
+├── scripts/                   # вспомогательные скрипты
+│   ├── obfuscate-html-inline.js  # обфускация inline-скриптов в HTML
+│   └── hash-assets.js         # хеширование ассетов и обновление ссылок
+├── src/                       # исходные файлы
+│   ├── html/                  # HTML-файлы
+│   │   └── index.html         # пример HTML
+│   ├── css/                   # CSS-файлы
+│   │   └── protection.css     # защита от копирования
+│   ├── js/                    # JS-файлы
+│   │   └── protection.js      # клиентские защиты
+│   ├── assets/                # изображения, шрифты и др.
+│   │   └── .keep              # фиксация папки в git
+│   └── img/                   # изображения (устаревшая папка)
+├── config.mk                  # общие пути, опции и игнорируемые файлы
+├── Makefile                   # автоматизированные команды сборки
+├── package.json               # конфигурация npm-пакета
+├── eslint.config.js           # конфигурация ESLint v9
+├── .stylelintrc               # конфигурация Stylelint
+├── .htmlhintrc                # конфигурация HTMLHint
+├── obfuscator.json            # настройки обфускации JS
+├── Dockerfile                 # контейнеризация
+├── .gitignore                 # игнорируемые файлы
+├── LICENSE                    # лицензия MIT + ограничения
+├── README.md                  # документация (EN/RU)
+└── structure-draft.tree       # эта схема структуры

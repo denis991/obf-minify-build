@@ -44,7 +44,7 @@ obfuscate-js:
 
 obfuscate-html-inline:
 	@echo "🔍 Обфускация inline-скриптов в HTML..."
-	node scripts/obfuscate-html-inline.js $(BUILD_DIR)/index.html
+	node scripts/obfuscate-html-inline.js $(BUILD_DIR)
 
 hash-assets:
 	@echo "🔗 Хеширование ассетов и обновление ссылок..."
