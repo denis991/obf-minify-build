@@ -1,0 +1,13 @@
+# Resources directory
+
+This directory is for additional resources that don't fit into other categories.
+
+Examples:
+- Data files: .json, .xml, .csv
+- Documentation: .md, .txt
+- Configuration: .conf, .ini
+- Templates: .hbs, .ejs
+- Other static files
+
+Files placed here will be copied to the build directory but may not
+undergo the same processing as assets (no minification/hashing).

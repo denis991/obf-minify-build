@@ -2,15 +2,123 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <title>Demo Protected Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>obf-minify-build Demo</title>
     <link rel="stylesheet" href="../css/protection.css" />
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        min-height: 100vh;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2.5em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      .feature {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 10px;
+        border-left: 4px solid #4caf50;
+      }
+      .warning {
+        background: rgba(255, 193, 7, 0.2);
+        border-left-color: #ffc107;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+      }
+      code {
+        background: rgba(0, 0, 0, 0.3);
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-family: 'Courier New', monospace;
+      }
+    </style>
   </head>
   <body class="nocopy">
-    <h1>Пример защищённого сайта</h1>
+    <div class="container">
+      <h1>🛡️ obf-minify-build Demo</h1>
+
+      <div class="feature">
+        <h3>✅ Активные защиты:</h3>
+        <ul>
+          <li>Запрет выделения текста</li>
+          <li>Блокировка контекстного меню</li>
+          <li>Защита от DevTools</li>
+          <li>Блокировка горячих клавиш (F12, Ctrl+Shift+I, etc.)</li>
+          <li>Защита от печати</li>
+        </ul>
+      </div>
+
+      <div class="warning"><strong>⚠️ Внимание:</strong> Этот сайт защищен от инспекции. Попытка открыть DevTools может привести к блокировке контента.</div>
+
+      <div class="feature">
+        <h3>🔧 Возможности obf-minify-build:</h3>
+        <ul>
+          <li>Автоматическая минификация HTML, CSS, JS</li>
+          <li>Обфускация JavaScript кода</li>
+          <li>Хеширование ассетов для кеширования</li>
+          <li>Встроенные защиты от копирования</li>
+          <li>CLI и API интерфейсы</li>
+        </ul>
+      </div>
+
+      <div class="feature">
+        <h3>📁 Структура проекта:</h3>
+        <pre><code>src/
+├── html/          # HTML файлы
+├── css/           # CSS стили
+├── js/            # JavaScript файлы
+├── assets/        # Изображения, шрифты
+└── resources/     # Дополнительные ресурсы</code></pre>
+      </div>
+
+      <div class="feature">
+        <h3>🚀 Команды сборки:</h3>
+        <ul>
+          <li><code>npm run build</code> — полная сборка</li>
+          <li><code>npm run dev</code> — пересборка при изменениях</li>
+          <li><code>npm run start</code> — сборка и запуск сервера</li>
+        </ul>
+      </div>
+    </div>
+
     <script src="../js/protection.js"></script>
     <script>
-      // Пример inline-скрипта
-      console.log('Inline script!');
+      // Пример inline-скрипта (будет обфусцирован)
+      window.__obfuscator = window.__obfuscator || {};
+      window.__obfuscator.__initialized = true;
+
+      // Простая анимация для демонстрации
+      document.addEventListener('DOMContentLoaded', function () {
+        const features = document.querySelectorAll('.feature');
+        features.forEach((feature, index) => {
+          feature.style.opacity = '0';
+          feature.style.transform = 'translateY(20px)';
+          setTimeout(() => {
+            feature.style.transition = 'all 0.5s ease';
+            feature.style.opacity = '1';
+            feature.style.transform = 'translateY(0)';
+          }, index * 200);
+        });
+      });
     </script>
   </body>
 </html>

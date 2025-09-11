@@ -1,6 +1,6 @@
 {
   "name": "obf-minify-build",
-  "version": "0.0.4",
+  "version": "0.0.4-rc.1",
   "description": "Автоматизированная сборка фронтенда с минификацией, обфускацией и защитами. CLI и API.",
   "type": "module",
   "main": "lib/index.js",
@@ -68,7 +68,9 @@
   "scripts": {
     "build": "make all",
     "dev": "onchange 'src/**/*' -- npm run build",
-    "start": "npm run build && live-server build"
+    "start": "npm run build && live-server build",
+    "test": "./test-all.sh",
+    "test:cli": "npx obf-minify-build --help"
   },
   "browserslist": [
     ">0.25%",

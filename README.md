@@ -28,7 +28,17 @@ Automated frontend build tool with minification, obfuscation, and protection fea
 
 ### CLI (no installation required)
 ```sh
-npx obf-minify-build --src src --out build
+# Basic usage (uses Makefile)
+npx obf-minify-build
+
+# Custom source and output directories
+npx obf-minify-build --src src --out dist
+
+# Use Node.js build instead of Makefile
+npx obf-minify-build --no-make
+
+# Show help
+npx obf-minify-build --help
 ```
 
 ### As dependency
@@ -46,6 +56,8 @@ npx obf-minify-build --src src --out build
 - `npm run build` — full build
 - `npm run dev` — rebuild on changes
 - `npm run start` — build and start local server
+- `npm run test` — run complete test suite
+- `npm run test:cli` — test CLI help
 
 ## Requirements
 - Node.js >= 18
@@ -83,7 +95,17 @@ npx obf-minify-build --src src --out build
 
 ### CLI (без установки)
 ```sh
-npx obf-minify-build --src src --out build
+# Базовое использование (использует Makefile)
+npx obf-minify-build
+
+# Пользовательские папки исходников и вывода
+npx obf-minify-build --src src --out dist
+
+# Использовать Node.js сборку вместо Makefile
+npx obf-minify-build --no-make
+
+# Показать справку
+npx obf-minify-build --help
 ```
 
 ### Как зависимость
@@ -101,10 +123,19 @@ npx obf-minify-build --src src --out build
 - `npm run build` — полная сборка
 - `npm run dev` — пересборка при изменениях
 - `npm run start` — сборка и запуск локального сервера
+- `npm run test` — запуск полного набора тестов
+- `npm run test:cli` — тест CLI справки
 
 ## Требования
 - Node.js >= 18
 - Linux/macOS/WSL (cpio, find, make)
 
 ---
-Documentation and API — see [Wiki](./docs) or source code.
+Documentation and API — see [docs/](./docs/) or source code.
+
+## Documentation
+
+- [API Reference](./docs/README.md) - Complete API documentation
+- [Examples](./docs/EXAMPLES.md) - Usage examples and best practices
+- [Testing](./docs/TESTING.md) - Complete testing guide
+- [Troubleshooting](./docs/TROUBLESHOOTING.md) - Common issues and solutions

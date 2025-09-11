@@ -29,6 +29,10 @@ Examples:
 }
 
 try {
+  // If custom src/out paths are provided, use Node.js build
+  if (opts.src || opts.out) {
+    opts.make = false;
+  }
   build(opts);
 } catch (error) {
   console.error('❌ Build failed:', error.message);

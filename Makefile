@@ -15,7 +15,9 @@ build:
 		-name "*.html" -o \
 		-name "*.css" -o \
 		-name "*.js" -o \
-		-name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.gif" -o -name "*.svg" -o -name "*.webp" \
+		-name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.gif" -o -name "*.svg" -o -name "*.webp" -o \
+		-name "*.woff" -o -name "*.woff2" -o -name "*.ttf" -o -name "*.otf" -o \
+		-name "*.ico" -o -name "*.pdf" -o -name "*.json" -o -name "*.xml" -o -name "*.txt" -o -name "*.md" \
 		| cpio -pdm ../$(BUILD_DIR)
 
 minify-css:

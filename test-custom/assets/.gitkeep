@@ -1,0 +1,11 @@
+# Assets directory
+
+This directory is for static assets like images, fonts, icons, etc.
+
+Supported formats:
+- Images: .png, .jpg, .jpeg, .gif, .svg, .webp
+- Fonts: .woff, .woff2, .ttf, .otf
+- Other: .ico, .pdf, etc.
+
+Files placed here will be automatically copied to the build directory
+and processed during the build (minification, hashing, etc.).
