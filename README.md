@@ -37,6 +37,11 @@ npx obf-minify-build --src src --out dist
 # Use Node.js build instead of Makefile
 npx obf-minify-build --no-make
 
+# Inline resources (new in v0.0.5)
+npx obf-minify-build --inline-all --out dist
+npx obf-minify-build --inline-css --inline-js
+npx obf-minify-build --skip-obfuscation-for vendor,libs
+
 # Show help
 npx obf-minify-build --help
 ```
